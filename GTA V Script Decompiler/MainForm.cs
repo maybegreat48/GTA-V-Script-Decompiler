@@ -1,4 +1,4 @@
-﻿using Decompiler.UI;
+using Decompiler.UI;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections.Generic;
@@ -111,7 +111,7 @@ namespace Decompiler
 		{
 			OpenFileDialog ofd = new()
 			{
-				Filter = "GTA V Script Files|*.ysc;*.ysc.full"
+				Filter = "GTA V Script Files|*.ssc;*.dsc;*.psc;*.osc;*.ysc;*.ysc.full*.osc.full;*.psc.full;*.dsc.full;*.scc.full"
 			};
 
 			if (ofd.ShowDialog() == DialogResult.OK)
@@ -192,13 +192,53 @@ namespace Decompiler
 			var saveDirectory = Path.Combine(dirPath, "exported");
 			if (!Directory.Exists(saveDirectory))
 				Directory.CreateDirectory(saveDirectory);
-
+			
+			foreach (var file in Directory.GetFiles(dirPath, "*.ssc"))
+			{
+				CompileList.Enqueue(file);
+			}
+			
+			foreach (var file in Directory.GetFiles(dirPath, "*.dsc"))
+			{
+				CompileList.Enqueue(file);
+			}
+			
+			foreach (var file in Directory.GetFiles(dirPath, "*.psc"))
+			{
+				CompileList.Enqueue(file);
+			}
+			
+			foreach (var file in Directory.GetFiles(dirPath, "*.osc"))
+			{
+				CompileList.Enqueue(file);
+			}
+			
 			foreach (var file in Directory.GetFiles(dirPath, "*.ysc"))
 			{
 				CompileList.Enqueue(file);
 			}
 
 			foreach (var file in Directory.GetFiles(dirPath, "*.ysc.full"))
+			{
+				CompileList.Enqueue(file);
+			}
+			
+			foreach (var file in Directory.GetFiles(dirPath, "*.osc.full"))
+			{
+				CompileList.Enqueue(file);
+			}
+			
+			foreach (var file in Directory.GetFiles(dirPath, "*.psc.full"))
+			{
+				CompileList.Enqueue(file);
+			}
+			
+			foreach (var file in Directory.GetFiles(dirPath, "*.dsc.full"))
+			{
+				CompileList.Enqueue(file);
+			}
+			
+			foreach (var file in Directory.GetFiles(dirPath, "*.ssc.full"))
 			{
 				CompileList.Enqueue(file);
 			}
@@ -264,7 +304,7 @@ namespace Decompiler
 		{
 			OpenFileDialog ofd = new()
 			{
-				Filter = "GTA V Script Files|*.ysc;*.ysc.full"
+				Filter = "GTA V Script Files|*.ssc;*.dsc;*.psc;*.osc;*.ysc;*.ysc.full*.osc.full;*.psc.full;*.dsc.full;*.scc.full"
 			};
 
 			if (ofd.ShowDialog() == DialogResult.OK)
