@@ -113,7 +113,7 @@ namespace Decompiler
         {
             OpenFileDialog ofd = new()
             {
-                Filter = "GTA V Script Files|*.ysc;*.ysc.full"
+                Filter = "GTA V Script Files|*.ysc;*.osc;*.dsc;*.psc;*.ssc;*.ysc.full;*.osc.full;*.dsc.full;*.psc.full;*.ssc.full"
             };
 
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -200,7 +200,47 @@ namespace Decompiler
                 CompileList.Enqueue(file);
             }
 
+            foreach (var file in Directory.GetFiles(dirPath, "*.osc"))
+            {
+                CompileList.Enqueue(file);
+            }
+
+            foreach (var file in Directory.GetFiles(dirPath, "*.dsc"))
+            {
+                CompileList.Enqueue(file);
+            }
+
+            foreach (var file in Directory.GetFiles(dirPath, "*.psc"))
+            {
+                CompileList.Enqueue(file);
+            }
+
+            foreach (var file in Directory.GetFiles(dirPath, "*.ssc"))
+            {
+                CompileList.Enqueue(file);
+            }
+
             foreach (var file in Directory.GetFiles(dirPath, "*.ysc.full"))
+            {
+                CompileList.Enqueue(file);
+            }
+
+            foreach (var file in Directory.GetFiles(dirPath, "*.osc.full"))
+            {
+                CompileList.Enqueue(file);
+            }
+
+            foreach (var file in Directory.GetFiles(dirPath, "*.dsc.full"))
+            {
+                CompileList.Enqueue(file);
+            }
+
+            foreach (var file in Directory.GetFiles(dirPath, "*.psc.full"))
+            {
+                CompileList.Enqueue(file);
+            }
+
+            foreach (var file in Directory.GetFiles(dirPath, "*.ssc.full"))
             {
                 CompileList.Enqueue(file);
             }
@@ -266,7 +306,7 @@ namespace Decompiler
         {
             OpenFileDialog ofd = new()
             {
-                Filter = "GTA V Script Files|*.ysc;*.ysc.full"
+                Filter = "GTA V Script Files|*.ysc;*.osc;*.dsc;*.psc;*.ssc;*.ysc.full;*.osc.full;*.dsc.full;*.psc.full;*.ssc.full"
             };
 
             if (ofd.ShowDialog() == DialogResult.OK)
