@@ -113,7 +113,7 @@ namespace Decompiler
         {
             OpenFileDialog ofd = new()
             {
-                Filter = "GTA V Script Files|*.ysc;*.osc;*.dsc;*.psc;*.zsc;*.ysc.full;*.osc.full;*.dsc.full;*.psc.full;*.zsc.full;*.zsc;"
+                Filter = "GTA V Script Files|*.ysc;*.osc;*.dsc;*.psc;*.zsc;*.ysc.full;*.osc.full;*.dsc.full;*.psc.full;*.zsc.full"
             };
 
             if (ofd.ShowDialog() == DialogResult.OK)
