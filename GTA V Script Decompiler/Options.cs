@@ -13,7 +13,7 @@ namespace Decompiler
 		[Option('n', "native_tables", HelpText = "Don't extract native tables.")]
 		public bool DontExtractNativeTables { get; set; }
 
-		[Option('v', "verbose", HelpText = "Show wich file is currently being decompiled.")]
+		[Option('v', "verbose", HelpText = "Show which file is currently being decompiled.")]
 		public bool Verbose { get; set; }
 	}
 }

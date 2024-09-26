@@ -113,7 +113,7 @@ namespace Decompiler
         {
             OpenFileDialog ofd = new()
             {
-                Filter = "GTA V Script Files|*.ysc;*.osc;*.dsc;*.psc;*.ssc;*.ysc.full;*.osc.full;*.dsc.full;*.psc.full;*.ssc.full"
+                Filter = "GTA V Script Files|*.ysc;*.osc;*.dsc;*.psc;*.zsc;*.ysc.full;*.osc.full;*.dsc.full;*.psc.full;*.zsc.full;*.zsc;"
             };
 
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -215,7 +215,7 @@ namespace Decompiler
                 CompileList.Enqueue(file);
             }
 
-            foreach (var file in Directory.GetFiles(dirPath, "*.ssc"))
+            foreach (var file in Directory.GetFiles(dirPath, "*.zsc"))
             {
                 CompileList.Enqueue(file);
             }
@@ -240,7 +240,7 @@ namespace Decompiler
                 CompileList.Enqueue(file);
             }
 
-            foreach (var file in Directory.GetFiles(dirPath, "*.ssc.full"))
+            foreach (var file in Directory.GetFiles(dirPath, "*.zsc.full"))
             {
                 CompileList.Enqueue(file);
             }
@@ -306,7 +306,7 @@ namespace Decompiler
         {
             OpenFileDialog ofd = new()
             {
-                Filter = "GTA V Script Files|*.ysc;*.osc;*.dsc;*.psc;*.ssc;*.ysc.full;*.osc.full;*.dsc.full;*.psc.full;*.ssc.full"
+                Filter = "GTA V Script Files|*.ysc;*.osc;*.dsc;*.psc;*.zsc;*.ysc.full;*.osc.full;*.dsc.full;*.psc.full;*.zsc.full"
             };
 
             if (ofd.ShowDialog() == DialogResult.OK)
