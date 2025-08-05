@@ -105,7 +105,10 @@ namespace Decompiler
 				return;
 			}
 
-			ExtractNativeTables(fileName, fileopen);
+			if (extractNativeTables)
+			{
+				ExtractNativeTables(fileName, fileopen);
+			}
 
 			Console.WriteLine("Decompiled in " + (DateTime.Now - Start).ToString());
 			fileopen.Save(File.OpenWrite(fileName + ".c"), true);
