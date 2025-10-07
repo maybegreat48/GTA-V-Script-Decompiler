@@ -5,3 +5,4 @@ GTA V Script Decompiler/bin/
 *.exe
 *.db
 !GTA V Script Decompiler/Resources/functions.db
+/.vscode/

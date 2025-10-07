@@ -106,9 +106,9 @@ namespace Decompiler
             new[]{"ILT_JZ", "R"},
             new[]{"ILE_JZ", "R"},
             new[]{"CALL", "a"},
-            new[]{"LOCAL_U24", "a"},
-            new[]{"LOCAL_U24_LOAD", "a"},
-            new[]{"LOCAL_U24_STORE", "a"},
+            new[]{"STATIC_U24", "a"},
+            new[]{"STATIC_U24_LOAD", "a"},
+            new[]{"STATIC_U24_STORE", "a"},
             new[]{"GLOBAL_U24", "a"},
             new[]{"GLOBAL_U24_LOAD", "a"},
             new[]{"GLOBAL_U24_STORE", "a"},
@@ -155,9 +155,6 @@ namespace Decompiler
             new[]{"GLOBAL_LOAD_S", ""},
             new[]{"GLOBAL_STORE_S", ""},
             new[]{"GLOBAL_STORE_SR", ""},
-            new[]{"STATIC_U24", ""},
-            new[]{"STATIC_U24_LOAD", ""},
-            new[]{"STATIC_U24_STORE", ""}
         };
         private readonly Function Function;
         private readonly Patch[] patches;

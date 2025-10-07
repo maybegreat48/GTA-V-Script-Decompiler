@@ -251,9 +251,6 @@ namespace Decompiler
                     case Opcode.STATIC_U24:
                     case Opcode.STATIC_U24_LOAD:
                     case Opcode.STATIC_U24_STORE:
-                    case Opcode.LOCAL_U24:
-                    case Opcode.LOCAL_U24_LOAD:
-                    case Opcode.LOCAL_U24_STORE:
                     case Opcode.GLOBAL_U24:
                     case Opcode.GLOBAL_U24_LOAD:
                     case Opcode.GLOBAL_U24_STORE:
@@ -353,9 +350,6 @@ namespace Decompiler
                     case Opcode.STATIC_U24:
                     case Opcode.STATIC_U24_LOAD:
                     case Opcode.STATIC_U24_STORE:
-                    case Opcode.LOCAL_U24:
-                    case Opcode.LOCAL_U24_LOAD:
-                    case Opcode.LOCAL_U24_STORE:
                     case Opcode.GLOBAL_U24:
                     case Opcode.GLOBAL_U24_LOAD:
                     case Opcode.GLOBAL_U24_STORE:
