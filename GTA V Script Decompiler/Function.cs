@@ -627,9 +627,6 @@ namespace Decompiler
                     case Opcode.STATIC_U24:
                     case Opcode.STATIC_U24_LOAD:
                     case Opcode.STATIC_U24_STORE:
-                    case Opcode.LOCAL_U24:
-                    case Opcode.LOCAL_U24_LOAD:
-                    case Opcode.LOCAL_U24_STORE:
                     case Opcode.GLOBAL_U24:
                     case Opcode.GLOBAL_U24_LOAD:
                     case Opcode.GLOBAL_U24_STORE:
@@ -907,17 +904,14 @@ namespace Decompiler
                         break;
                     case Opcode.LOCAL_U8:
                     case Opcode.LOCAL_U16:
-                    case Opcode.LOCAL_U24:
                         Stack.Push(new Ast.Local(this, Instructions[tree.Offset].GetOperandsAsUInt));
                         break;
                     case Opcode.LOCAL_U8_LOAD:
                     case Opcode.LOCAL_U16_LOAD:
-                    case Opcode.LOCAL_U24_LOAD:
                         Stack.Push(new Ast.LocalLoad(this, Instructions[tree.Offset].GetOperandsAsUInt));
                         break;
                     case Opcode.LOCAL_U8_STORE:
                     case Opcode.LOCAL_U16_STORE:
-                    case Opcode.LOCAL_U24_STORE:
                         tree.Statements.Add(new Ast.LocalStore(this, Instructions[tree.Offset].GetOperandsAsUInt, Stack.Pop()));
                         break;
                     case Opcode.STATIC_U8:

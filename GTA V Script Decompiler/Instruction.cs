@@ -101,9 +101,9 @@ namespace Decompiler
         ILT_JZ,
         ILE_JZ,
         CALL,
-        LOCAL_U24,
-        LOCAL_U24_LOAD,
-        LOCAL_U24_STORE,
+        STATIC_U24,
+        STATIC_U24_LOAD,
+        STATIC_U24_STORE,
         GLOBAL_U24,
         GLOBAL_U24_LOAD,
         GLOBAL_U24_STORE,
@@ -153,9 +153,6 @@ namespace Decompiler
         GLOBAL_LOAD_S,
         GLOBAL_STORE_S,
         GLOBAL_STORE_SR,
-        STATIC_U24,
-        STATIC_U24_LOAD,
-        STATIC_U24_STORE,
     };
 
     internal class Instruction
